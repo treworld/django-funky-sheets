@@ -22,7 +22,7 @@ class Movie(models.Model):
     # Number field
     imdb_rating = models.DecimalField(max_digits=2, decimal_places=1, null=True)
     # Boolean field
-    parents_guide = models.BooleanField(default=False, null=True)
+    parents_guide = models.BooleanField(default=False)
     # Date field
     release_date = models.DateField(null=True)
     # Relationship fields
