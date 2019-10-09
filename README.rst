@@ -2,7 +2,8 @@
 Django Funky Sheets
 ===================
 
-Django implementation of Handsontable spreadsheets for CRUD actions.
+Django implementation of Handsontable spreadsheets for CRUD actions. This
+is a fork of version 0.1.3. It is now compatible with Django 1.11.x.
 
 Live Demo
 =========
@@ -40,13 +41,14 @@ Define URLs for Create and Update views.
 
   # urls.py
 
-  from django.urls import path
+  from django.conf.urls import url
+
   from . import views
 
   urlpatterns = [
-    path('', views.index, name='index'),
-    path('create/', views.CreateMovieView.as_view(), name='create'),
-    path('update/', views.UpdateMovieView.as_view(), name='update')
+    url(r'^$', views.index, name='index'),
+    url(r'^create/', views.CreateMovieView.as_view(), name='create'),
+    url(r'^update/', views.UpdateMovieView.as_view(), name='update'),
   ]
 
 View
@@ -137,3 +139,9 @@ License
 =======
 
 This project is licensed under the MIT License.
+
+Changes
+=======
+
+2019-10-09
+  - backported to Django 1.11.x

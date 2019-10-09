@@ -21,7 +21,7 @@ setup(
     install_requires=[
         'six',
         'pytz',
-        'Django>=2.0',
+        'Django>=1.11.0',
         'django-extra-views>=0.12.0',
     ],
     classifiers=[
